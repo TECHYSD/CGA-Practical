@@ -1,0 +1,26 @@
+#include<iostream.h> 
+#include<conio.h> 
+#include<graphics.h> 
+void main() 
+{ 
+int gd=DETECT,gm; 
+clrscr(); 
+initgraph(&gd,&gm,"c:\\tc\\bgi");
+line(1,240,640,240); 
+line(320,1,320,480); 
+circle(160,120,80); 
+setfillstyle(4,2); 
+floodfill(160,120,15); 
+rectangle(400,50,520,190); 
+setfillstyle(8,3); 
+floodfill(450,80,15); 
+rectangle(50,300,250,450); 
+setfillstyle(1,2); 
+floodfill(80,320,15); 
+line(450,300,350,450); 
+line(450,300,550,450); 
+line(350,450,550,450); 
+setfillstyle(1,2);
+floodfill(450,400,15); 
+getch(); 
+}
