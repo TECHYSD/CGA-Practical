@@ -1,0 +1,20 @@
+#include<iostream.h> OUTPUT 
+#include<conio.h> 
+#include<graphics.h> 
+void main() 
+{ 
+int gd=DETECT,gm,xcen,ycen; 
+clrscr(); 
+initgraph(&gd,&gm,"c:\\tc\\bgi"); 
+settextstyle(1,0,4); 
+outtextxy(150,130,”DIVINE COTTAGE”); 
+line(100,100,400,100); 
+line(100,100,50,200); 
+line(50,200,400,200); 
+line(400,400,400,200); 
+line(400,100,400,200); 
+line(150,200,150,400); 
+line(100,100,150,200); 
+rectangle(50,200,400,400); 
+getch(); 
+}
