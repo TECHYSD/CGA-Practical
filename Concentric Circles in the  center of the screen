@@ -1,0 +1,18 @@
+#include<iostream.h> 
+#include<conio.h> 
+#include<graphics.h> OUTPUT 
+#include<dos.h> 
+void main() 
+{ 
+int gd=DETECT,gm,xcen,ycen,i,color=1; 
+initgraph(&gd,&gm,"c:\\tc\\bgi"); 
+xcen=getmaxx()/2; 
+ycen=getmaxy()/2; 
+for(i=10;i<=100;i+=1) 
+{ 
+setcolor(color++); 
+circle(xcen,ycen,i); 
+delay(20); 
+} 
+getch(); 
+}
