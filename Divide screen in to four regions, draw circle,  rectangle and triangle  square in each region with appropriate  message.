@@ -1,0 +1,33 @@
+#include<iostream.h> 
+#include<conio.h> 
+#include<graphics.h> 
+void main() 
+{ 
+int gd=DETECT,gm,i; 
+clrscr(); 
+initgraph(&gd,&gm,"c:\\tc\\bgi"); OUTPUT 
+for(i=2;i<10;i++) 
+{ 
+line(1,240,640,240); 
+line(320,1,320,480); 
+circle(160,120,80); 
+//setfillstyle(4,2); 
+//floodfill(160,120,15); 
+//setcolor(RED); 
+settextstyle(1,0,3); 
+outtextxy(130,110,"Circle"); 
+rectangle(400,50,520,190); 
+//setfillstyle(8,3); 
+//floodfill(450,80,15); 
+outtextxy(430,110,"Square"); 
+rectangle(50,300,250,450); 
+//setfillstyle(7,2); 
+//floodfill(80,320,15); 
+outtextxy(100,360,"Rectangle"); 
+line(450,300,350,450); 
+line(450,300,550,450); 
+line(350,450,550,450); 
+//setfillstyle(5,2); 
+//floodfill(450,400,15); 
+outtextxy(410,380,"Triangle"); 
+}
