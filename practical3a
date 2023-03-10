@@ -1,0 +1,13 @@
+#include
+#include void main()
+{
+int gd=DETECT,gm,xcen,ycen; initgraph(&gd,&gm,"c:\\tc\\bgi");
+xcen=getmaxx()/2;
+ycen=getmaxy()/2;
+line(xcen,0,xcen,getmaxx());
+line(0,ycen,getmaxx(),ycen);
+circle(xcen,ycen,200);
+rectangle(xcen-200,ycen-200,xcen+200,ycen+200); / rectangle(xcen-90,ycen-180,xcen+90,ycen+180);
+ellipse(xcen,ycen,0,360,90,150);
+getch();
+}
