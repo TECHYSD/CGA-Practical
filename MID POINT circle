@@ -1,0 +1,47 @@
+#include<iostream.h>
+#include<conio.h>
+#include<dos.h>
+#include<graphics.h>
+void plotpoints(int,int,int,int);
+void main()
+{
+int x,y,x1,y1,p,r;
+int gd,gm;
+clrscr();
+cout<<"Enter the center of circle x & y:"; 
+cin>>x>>y;
+cout<<"Enter the radius of circle:";
+cin>>r;
+detectgraph(&gd,&gm);
+initgraph(&gd,&gm,"c:\\tc\\bgi");
+x1=0;
+y1=r;
+p=1-r;
+while(x1<=y1)
+{
+plotpoints(x,y,x1,y1);
+if(p<0)
+{
+p=p+2*x1+3;
+}
+else
+{
+p=p+2*(x1-y1)+5;
+y1--;
+}
+x1++;
+}
+getch();
+}
+void plotpoints(int a,int b,int c,int d)
+{
+putpixel(a+c,b+d,10);
+putpixel(a-c,b+d,9);
+putpixel(a+c,b-d,2);
+putpixel(a-c,b-d,7);
+putpixel(a+d,b+c,RED);
+putpixel(a-d,b+c,BLUE);
+putpixel(a+d,b-c,5);
+putpixel(a-d,b-c,6);
+delay(100);
+}
