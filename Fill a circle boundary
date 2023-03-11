@@ -1,0 +1,32 @@
+#include<iostream.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+void bfill(int x,int y,int f_col,int b_col)
+{
+int current=getpixel(x,y);
+if(current!=f_col&&current!=b_col) 
+{
+delay(10);
+putpixel(x,y,f_col);
+bfill(x+1,y,f_col,b_col);
+bfill(x-1,y,f_col,b_col);
+bfill(x,y+1,f_col,b_col);
+bfill(x,y-1,f_col,b_col);
+}
+}
+void main()
+{
+int gd=DETECT,gm,xc,yc,r;
+initgraph(&gd,&gm,"c:\\tc\\bgi");
+clrscr();
+cout<<"Enter co-ordinate of the center";
+cin>>xc>>yc;
+cout<<"Enter radius of the circle";
+cin>>r;
+circle(xc,yc,r);
+cout<<"Press any key to fill the circle ....";
+ // getch();
+bfill(xc,yc,RED,WHITE);
+getch();
+closegraph();
