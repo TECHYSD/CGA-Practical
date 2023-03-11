@@ -1,0 +1,41 @@
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+#include<graphics.h>
+#include<dos.h>
+void main()
+{
+float x,y,x1,y1,x2,y2,dx,dy,e; OUTPUT :
+int i,gd,gm;
+clrscr();
+cout<<"enter the value of x1:\t";
+cin>>x1;
+cout<<"enter the value of y1:\t";
+cin>>y1;
+cout<<"enter the value of x2:\t";
+cin>>x2;
+cout<<"enter the value of y2:\t";
+cin>>y2;
+detectgraph(&gd,&gm);
+initgraph(&gd,&gm,"C:\\TC\\BGI");
+dx=abs(x2-x1);
+dy=abs(y2-y1);
+x=x1;
+y=y1;
+e=2*(dy-dx);
+i=1;
+do
+{
+putpixel(x,y,15);
+while(e>0)
+{
+y=y+1;
+e=e-2*dx;
+}
+x=x+1;
+e=e-2*dy;
+i=i+1;
+delay(50);
+}while(i<=dx);
+getch();
+}
