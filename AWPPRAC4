@@ -1,0 +1,72 @@
+Ans 4 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page with Radio Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<form id="operationForm">
+    <!-- Radio buttons -->
+    <label>
+        <input type="radio" name="operation" value="option1" checked> Option 1
+    </label>
+    <label>
+        <input type="radio" name="operation" value="option2"> Option 2
+    </label>
+
+    <br>
+
+    <!-- Dropdown list -->
+    <label for="dropdown">Choose an option:</label>
+    <select id="dropdown" name="dropdown">
+        <option value="value1">Value 1</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+    </select>
+
+    <br>
+
+    <!-- Text box -->
+    <label for="textBox">Enter text:</label>
+    <input type="text" id="textBox" name="textBox" placeholder="Type here">
+
+    <br>
+
+    <!-- Result label -->
+    <label for="result">Result:</label>
+    <span id="result"></span>
+
+    <br>
+
+    <!-- Button to trigger operation -->
+    <button type="button" onclick="performOperation()">Perform Operation</button>
+</form>
+
+<script>
+    function performOperation() {
+        // Get selected radio button value
+        var selectedOption = document.querySelector('input[name="operation"]:checked').value;
+
+        // Get selected dropdown value
+        var selectedDropdown = document.getElementById("dropdown").value;
+
+        // Get text box value
+        var textBoxValue = document.getElementById("textBox").value;
+
+        // Concatenate values and display in result span
+        var result = selectedOption + " | " + selectedDropdown + " | " + textBoxValue;
+        document.getElementById("result").innerText = result;
+    }
+</script>
+
+</body>
+</html>
